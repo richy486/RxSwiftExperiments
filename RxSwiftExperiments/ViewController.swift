@@ -48,6 +48,13 @@ class ViewController: UIViewController {
         return label
     }()
     
+    let thingSwitch: UISwitch = {
+        let aSwitch = UISwitch();
+        aSwitch.translatesAutoresizingMaskIntoConstraints = false
+        aSwitch.tintColor = .red
+        return aSwitch
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +70,10 @@ class ViewController: UIViewController {
             .throttle(throttleInterval, scheduler: MainScheduler.instance) // Since you want to keep everything on the main thread, use MainScheduler.
             .subscribe { (event) in
                 print("event: \(event)")
+                
+                let detailViewController = DetailViewController()
+                self.navigationController?.pushViewController(detailViewController, animated: true)
+                
             }.addDisposableTo(disposeBag)
         
         view.addSubview(cityNameTextField)
@@ -91,6 +102,17 @@ class ViewController: UIViewController {
             self.viewModel.searchText.onNext(text)
         })
             .addDisposableTo(disposeBag)
+        
+        
+        view.addSubview(thingSwitch)
+        thingSwitch.topAnchor.constraint(equalTo: degreesLabel.bottomAnchor, constant: 100).isActive = true
+        thingSwitch.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50).isActive = true
+        
+        
+//        thingSwitch.rx.value
+//            .bind(to: appController.appState.value.thingOn)
+//            .addDisposableTo(disposeBag)
+        (thingSwitch.rx.value <-> appController.appState.value.thingOn).addDisposableTo(disposeBag)
     }
     
     override func didReceiveMemoryWarning() {

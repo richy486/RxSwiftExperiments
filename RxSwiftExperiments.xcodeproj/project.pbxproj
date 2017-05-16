@@ -16,6 +16,10 @@
 		CA47401F1ECA332300EBDC30 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47401D1ECA332300EBDC30 /* ViewModel.swift */; };
 		CA4740201ECA332300EBDC30 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47401E1ECA332300EBDC30 /* Weather.swift */; };
 		CA4740221ECA333200EBDC30 /* Secrets in Resources */ = {isa = PBXBuildFile; fileRef = CA4740211ECA333200EBDC30 /* Secrets */; };
+		CA4740261ECA392000EBDC30 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4740251ECA392000EBDC30 /* AppState.swift */; };
+		CA4740281ECA393A00EBDC30 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4740271ECA393A00EBDC30 /* AppController.swift */; };
+		CA47405A1ECB985900EBDC30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4740591ECB985900EBDC30 /* DetailViewController.swift */; };
+		CA47405C1ECB995D00EBDC30 /* BiDirectional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47405B1ECB995D00EBDC30 /* BiDirectional.swift */; };
 		CE307028882AD65775BB946B /* Pods_RxSwiftExperiments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809B9A878934919D2439E325 /* Pods_RxSwiftExperiments.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		CA47401D1ECA332300EBDC30 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CA47401E1ECA332300EBDC30 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		CA4740211ECA333200EBDC30 /* Secrets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Secrets; sourceTree = "<group>"; };
+		CA4740251ECA392000EBDC30 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CA4740271ECA393A00EBDC30 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		CA4740591ECB985900EBDC30 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CA47405B1ECB995D00EBDC30 /* BiDirectional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiDirectional.swift; sourceTree = "<group>"; };
 		D1410222FE3BAF8AF78F9B1C /* Pods-RxSwiftExperiments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftExperiments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftExperiments/Pods-RxSwiftExperiments.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +123,12 @@
 			children = (
 				CA473FFD1ECA2AB900EBDC30 /* AppDelegate.swift */,
 				CA473FFF1ECA2AB900EBDC30 /* ViewController.swift */,
+				CA4740591ECB985900EBDC30 /* DetailViewController.swift */,
 				CA47401D1ECA332300EBDC30 /* ViewModel.swift */,
 				CA47401E1ECA332300EBDC30 /* Weather.swift */,
+				CA4740251ECA392000EBDC30 /* AppState.swift */,
+				CA4740271ECA393A00EBDC30 /* AppController.swift */,
+				CA47405B1ECB995D00EBDC30 /* BiDirectional.swift */,
 				CA4740041ECA2AB900EBDC30 /* Assets.xcassets */,
 				CA4740061ECA2AB900EBDC30 /* LaunchScreen.storyboard */,
 				CA4740091ECA2AB900EBDC30 /* Info.plist */,
@@ -339,9 +351,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4740201ECA332300EBDC30 /* Weather.swift in Sources */,
+				CA4740261ECA392000EBDC30 /* AppState.swift in Sources */,
 				CA4740001ECA2AB900EBDC30 /* ViewController.swift in Sources */,
 				CA47401F1ECA332300EBDC30 /* ViewModel.swift in Sources */,
 				CA473FFE1ECA2AB900EBDC30 /* AppDelegate.swift in Sources */,
+				CA4740281ECA393A00EBDC30 /* AppController.swift in Sources */,
+				CA47405A1ECB985900EBDC30 /* DetailViewController.swift in Sources */,
+				CA47405C1ECB995D00EBDC30 /* BiDirectional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

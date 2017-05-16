@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
+let appController = AppController()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,10 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
             let viewController = ViewController()
-            window.rootViewController = viewController
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
             window.backgroundColor = UIColor.white
             window.makeKeyAndVisible()
         }
+        
+        appController.appState.asObservable().subscribe { (state) in
+            print("state: \(state)")
+        }.addDisposableTo(disposeBag)
+        
+        appController.appState.value.thingOn.asObservable().subscribe { (thingOn) in
+            print("thingOn: \(thingOn)")
+        }.addDisposableTo(disposeBag)
+        
+        
         return true
     }
 
